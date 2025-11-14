@@ -1,11 +1,18 @@
 " --- CoC Configuration ---
 " Disable CoC by default on startup
-let g:coc_start_on_startup = 0
+let g:coc_start_on_startup = 1
 
 " --- Vim-Plug and Plugins ---
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" --- Add new themes here ---
+Plug 'folke/tokyonight.nvim'
+Plug 'morhetz/gruvbox'
+Plug 'dracula/vim'
+Plug 'joshdick/onedark.vim'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 call plug#end()
 " ___ END Plugins ___
@@ -72,7 +79,8 @@ set ignorecase
 set smartcase
 set foldmethod=indent
 set foldlevelstart=99 " Start with all folds open.
-colorscheme desert
+set termguicolors
+colorscheme dracula
 
 " --- HotKeys ---
 nnoremap <F5> :w <bar> !lci %<CR>
